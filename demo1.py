@@ -123,3 +123,5 @@ def process(image_path, video_path):
     predictions = make_animation(source_image, driving_video, generator, kp_detector, relative=True, adapt_movement_scale=True, cpu=True)
     imageio.mimsave("result.mp4", [img_as_ubyte(frame) for frame in predictions], fps=fps)
     return
+
+process("source.png","local.mp4")
